@@ -1,0 +1,16 @@
+<div class="container mt-2 px-2">
+    <h3>Enter the QR field: -</h3>
+    <form>
+        <div class="mb-3 row">
+            <label for="qrEnter" class="form-label col-lg-6">Enter the QR field: </label>
+            <input type="text" class="form-control col" [(ngModel)]="myQR" name="something">
+        </div>
+        <button type="submit" class="btn btn-primary  col-lg-4" (click)="onSubmit()">Make QR</button>
+    </form>
+    <br/>
+    <div *ngIf="submitted">
+        <a href="{{imgSrc}}" download="filename.jpg">
+            <img src = "{{imgSrc}}">
+        </a>
+    </div>
+</div>
